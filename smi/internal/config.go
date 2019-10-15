@@ -44,6 +44,11 @@ func expandPath(path string) (string, error) {
 	if err != nil {
 		return "", errors.Wrapf(err, "Get absolute path for '%s'", path)
 	}
+	path, err = filepath.EvalSymlinks(path)
+	if err != nil {
+		return "", errors.Wrapf(err, "Get Eval of path for '%s'", path)
+	}
+
 	info, err := os.Stat(path)
 	if err != nil {
 		return "", errors.Wrapf(err, "Cannot stat '%s'", path)
