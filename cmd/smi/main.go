@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/sleepinggenius2/gosmi"
+	"github.com/amariani1976/gosmi"
 )
 
 type arrayStrings []string

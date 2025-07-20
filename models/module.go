@@ -3,7 +3,7 @@ package models
 import (
 	"time"
 
-	"github.com/sleepinggenius2/gosmi/types"
+	"github.com/amariani1976/gosmi/types"
 )
 
 type Import struct {

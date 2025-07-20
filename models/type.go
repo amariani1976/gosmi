@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/pkg/errors"
-	"github.com/sleepinggenius2/gosmi/types"
+	"github.com/amariani1976/gosmi/types"
 )
 
 type Enum struct {
