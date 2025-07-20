@@ -1,43 +1,17 @@
 package types
 
-//go:generate enumer -type=Decl -autotrimprefix -json
-
 type Decl int
 
 const (
-	DeclUnknown Decl = iota
-	DeclImplicitType
-	DeclTypeAssignment
-	_
-	DeclImplSequenceOf
-	DeclValueAssignment
-	DeclObjectType
-	DeclObjectIdentity
-	DeclModuleIdentity
-	DeclNotificationType
-	DeclTrapType
-	DeclObjectGroup
-	DeclNotificationGroup
-	DeclModuleCompliance
-	DeclAgentCapabilities
-	DeclTextualConvention
-	DeclMacro
-	DeclComplGroup
-	DeclComplObject
-	DeclImplObject
-	DeclModule Decl = iota + 13
-	DeclExtension
-	DeclTypedef
-	DeclNode
-	DeclScalar
-	DeclTable
-	DeclRow
-	DeclColumn
-	DeclNotification
-	DeclGroup
-	DeclCompliance
-	DeclIdentity
-	DeclClass
-	DeclAttribute
-	DeclEvent
+	SMI_DECL_UNKNOWN Decl = iota
+	SMI_DECL_MODULE_IDENTITY
+	SMI_DECL_OBJECT_TYPE
+	SMI_DECL_OBJECT_IDENTITY
+	SMI_DECL_TRAP_TYPE
+	SMI_DECL_NOTIFICATION_TYPE
+	SMI_DECL_GROUP
+	SMI_DECL_COMPLIANCE
+	SMI_DECL_CAPABILITIES
+	SMI_DECL_OBJECT_GROUP
+	SMI_DECL_NOTIFICATION_GROUP
 )
