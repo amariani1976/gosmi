@@ -73,14 +73,18 @@ func GetModuleIdentityNode(smiModulePtr *types.SmiModule) *types.SmiNode {
 	return modulePtr.Identity.GetSmiNode()
 }
 
-// GetAllNodes restituisce tutti i nodi dichiarati OBJECT-TYPE e NOTIFICATION-TYPE
-func GetAllNodes(module *types.SmiModule) []*types.SmiNode {
-    var nodes []*types.SmiNode
-    for symbol := module.FirstSymbol; symbol != nil; symbol = symbol.Next {
-        node, ok := symbol.Value.(*types.SmiNode)
-        if ok && (node.Decl == types.SMI_DECL_OBJECTTYPE || node.Decl == types.SMI_DECL_NOTIFICATIONTYPE) {
-            nodes = append(nodes, node)
-        }
-    }
-    return nodes
+func GetAllNodesByName(moduleName string) []*types.SmiNode {
+	mod := getModule(moduleName)
+	if mod == nil {
+		return nil
+	}
+	var nodes []*types.SmiNode
+	for sym := mod.firstSymbol; sym != nil; sym = sym.next {
+		if node, ok := sym.value.(*types.SmiNode); ok {
+			if node.Decl == types.SMI_DECL_OBJECT_TYPE || node.Decl == types.SMI_DECL_NOTIFICATION_TYPE {
+				nodes = append(nodes, node)
+			}
+		}
+	}
+	return nodes
 }

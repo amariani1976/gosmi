@@ -3,15 +3,15 @@ package types
 type Decl int
 
 const (
-	SMI_DECL_UNKNOWN Decl = iota
-	SMI_DECL_MODULE_IDENTITY
-	SMI_DECL_OBJECT_TYPE
-	SMI_DECL_OBJECT_IDENTITY
-	SMI_DECL_TRAP_TYPE
-	SMI_DECL_NOTIFICATION_TYPE
-	SMI_DECL_GROUP
-	SMI_DECL_COMPLIANCE
-	SMI_DECL_CAPABILITIES
-	SMI_DECL_OBJECT_GROUP
-	SMI_DECL_NOTIFICATION_GROUP
+	smiDeclUnknown Decl = iota
+	smiDeclModuleIdentity
+	smiDeclObjectType
+	smiDeclObjectIdentity
+	smiDeclTrapType
+	smiDeclNotificationType
+	smiDeclGroup
+	smiDeclCompliance
+	smiDeclCapabilities
+	smiDeclObjectGroup
+	smiDeclNotificationGroup
 )

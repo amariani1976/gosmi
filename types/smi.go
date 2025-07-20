@@ -13,7 +13,6 @@ type SmiModule struct {
 	Reference    string
 	Language     Language
 	Conformance  bool
-	FirstSymbol  *Symbol
 }
 
 type SmiRevision struct {
